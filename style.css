@@ -1,0 +1,137 @@
+/* Basic page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+}
+
+/* Right side of the navbar */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative; 
+}
+
+.username-badge {
+    color: #007bff;
+    background-color: #e6f2ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Menu List (Default Desktop State) */
+.mobile-menu {
+    display: none; 
+    position: absolute; 
+    top: 50px;
+    right: -20px;
+    background-color: #1a2238; 
+    width: 250px;
+    height: 100vh;
+    z-index: 999;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding-top: 30px;
+}
+
+.mobile-menu ul li {
+    padding: 15px 20px;
+    text-align: right; /* Aligns links to the right */
+}
+
+.mobile-menu ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.mobile-menu ul li a:hover {
+    color: white;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+    display: none; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* The 3 lines of the hamburger icon */
+.hamburger-btn .bar {
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    
+    
+    .hamburger-btn {
+        display: block; 
+    }
+
+    /* Showing List on Click */
+    .hamburger-btn:focus + .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu:hover {
+        display: block;
+    }
+}
+
+/* Page Content Styling */
+.content-area {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content-area h1 {
+    color: #1a4a5e;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.content-area p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.book-btn {
+    background-color: #007bb5;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.washing-machine-img {
+    margin-top: 40px;
+}
